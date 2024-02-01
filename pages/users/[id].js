@@ -4,7 +4,7 @@ export default function () {
   const {query} = useRouter()
     return(
       <div>
-        User with id: {query.id}
+        <h1>User with id: {query.id}</h1>
       </div>
     );
 };
