@@ -1,0 +1,10 @@
+.navbar {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background: lightgrey;
+    gap: 15px;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}

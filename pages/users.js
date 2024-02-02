@@ -1,14 +1,19 @@
-import {useState} from "react";
 import Link from "next/link";
+import Navbar from "../components/Navbar";
+import styles from "../styles/Users.module.scss";
 
-const Users = () => {
-  const [users, setUsers] = useState([
-    {id: 1, name: 'Vasja'},
-    {id: 2, name: 'Petja'},
-    {id: 3, name: 'Kolja'},
-  ]);
+const Users = ({users}) => {
+  // ########### default react ###########
+  // const [users, setUsers] = useState([]);
+  // useEffect(async () => {
+  //   const response = await fetch('https://jsonplaceholder.typicode.com/users');
+  //   const data     = await response.json();
+  //   setUsers(data);
+  // }, []);
+
   return (
-    <div>
+    <div className={styles.main}>
+      <Navbar />
       <h1>Users List</h1>
       <ul>
         {users.map(user =>
@@ -22,3 +27,12 @@ const Users = () => {
 };
 
 export default Users;
+
+export async function getStaticProps() {
+  const response = await fetch('https://jsonplaceholder.typicode.com/users');
+  const users    = await response.json();
+
+  return {
+    props: {users},
+  }
+}
