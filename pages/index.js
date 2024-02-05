@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar";
 import MyHead from "../components/MyHead";
 
 const Index = () => {
-  const title = 'Home page';
+  const title = 'Home page test';
   return (
     <div>
       <MyHead keywords="next-js-keywords" title={title} />
