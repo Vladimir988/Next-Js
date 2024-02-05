@@ -1,14 +1,11 @@
 import Navbar from "../components/Navbar";
-import Head from "next/head";
+import MyHead from "../components/MyHead";
 
 const Index = () => {
   const title = 'Home page';
   return (
     <div>
-      <Head>
-        <meta keywords="next-js-keywords"></meta>
-        <title>{title}</title>
-      </Head>
+      <MyHead keywords="next-js-keywords" title={title} />
       <Navbar />
       <h1>{title}</h1>
     </div>

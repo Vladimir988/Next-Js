@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import styles from "../styles/Users.module.scss";
+import MyHead from "../components/MyHead";
 
 const Users = ({users}) => {
   // ########### default react ###########
@@ -11,10 +12,12 @@ const Users = ({users}) => {
   //   setUsers(data);
   // }, []);
 
+  const title = 'Users List';
   return (
     <div className={styles.main}>
+      <MyHead keywords="next-js-keywords" title={title} />
       <Navbar />
-      <h1>Users List</h1>
+      <h1>{title}</h1>
       <ul>
         {users.map(user =>
           <li key={user.id}>

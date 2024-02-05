@@ -1,9 +1,11 @@
 import Navbar from "../../components/Navbar";
+import MyHead from "../../components/MyHead";
 import styles from "../../styles/User.module.scss";
 
 export default function ({user}) {
   return(
     <div className={styles.main}>
+      <MyHead keywords="next-js-keywords" title={"User " + user.name} />
       <Navbar />
       <h1>User with id: {user.id}</h1>
       <p>name: <b>{user.name}</b></p>
